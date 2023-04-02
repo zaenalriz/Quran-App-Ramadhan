@@ -1,16 +1,32 @@
 <template>
-  <div class="pt-[50px]">
-<div class="flex items-center">
-  <img src="./../assets/icons/hamburger.svg" alt="hamburger">
- <h4 class="text-[#682CBB] font-bold text-[20px] mx-5">Quran App</h4>
+   <div class="flex px-0 justify-center w-100 h-full">
+  <div class="bg-white w-[450px]   px-[15px] sm:px[15px] lg:px=[50px]">
+  <Nav/>
+<Banner/>
+<Categories/>
+<ListSurah v-for="n in 100"/>
+    </div>
 </div>
-</div>
-<p class="text-[#B5A8C8] text-[20px] mt-3 font-bold">Welcome Brother</p>
-<div class="flex justify-center mt-4">
-  <img src="./../assets/icons/bg-list-surah.svg" alt="hamburger">
-
-</div> 
-
 </template>
-
+<script>
+import Banner from '../components/ListSurah/Banner.vue';
+import Categories from '../components/ListSurah/Categories.vue';
+import ListSurah from '../components/ListSurah/ListSurah.vue';
+import Nav from '../components/ListSurah/Nav.vue';
+export default{
+  components:{
+ Banner,
+ Nav,
+ Categories,
+ ListSurah
+  },
+  data(){
+    return {
+      data:1,
+      n:1
+    }
+  },
+  
+}
+</script>
 

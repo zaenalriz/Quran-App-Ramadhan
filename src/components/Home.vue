@@ -1,9 +1,9 @@
 
 <template>
-
+ 
     <div class="flex flex-col justify-center">
-        <h4 class="text-[#682CBB] text-center font-bold text-[35px] sm:pt-[5px] lg:pt-[15px]">Quran App</h4>
-        <p class="text-[#B5A8C8] text-center text-[20px] mb-4">Read Quran <br>and listen everyday</p>
+        <h4 class="text-default text-center font-bold text-[35px] sm:pt-[5px] lg:pt-[15px]">Quran App</h4>
+        <p class="text-light text-center text-[20px] mb-4">Read Quran <br>and listen everyday</p>
     </div>
     <div class="relative">
 <div class="flex justify-center">
@@ -15,6 +15,5 @@
 </router-link>
 </div>
     </div>
-    
 
 </template>
