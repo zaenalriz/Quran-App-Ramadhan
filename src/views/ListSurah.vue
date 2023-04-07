@@ -4,7 +4,7 @@
   <Nav/>
 <Banner/>
 <Categories/>
-<ListSurah v-for="n in 100"/>
+<ListSurah />
     </div>
 </div>
 </template>
@@ -13,6 +13,7 @@ import Banner from '../components/ListSurah/Banner.vue';
 import Categories from '../components/ListSurah/Categories.vue';
 import ListSurah from '../components/ListSurah/ListSurah.vue';
 import Nav from '../components/ListSurah/Nav.vue';
+
 export default{
   components:{
  Banner,
@@ -22,10 +23,9 @@ export default{
   },
   data(){
     return {
-      data:1,
-      n:1
+      data:[],
     }
-  },
+  }
   
 }
 </script>
