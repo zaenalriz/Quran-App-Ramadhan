@@ -19,4 +19,4 @@ async function GetData(path){
     }
 }
 
-export { GetData };
+export { GetData,URL };
