@@ -1,6 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
+@font-face {
+    font-family: myFirstFont;
+    src: url(../indopak-nastaleeq-waqf-lazim.ttf);
+  }
 body{
     background-color: rgb(189, 188, 197);
+}
+.arabic{
+    font-family: myFirstFont;
+    font-size: 25px;
+    text-align: right;
+
 }

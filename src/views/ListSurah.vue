@@ -4,7 +4,7 @@
   <Nav/>
 <Banner/>
 <Categories/>
-<ListSurah />
+<ListSurah :post="post"/>
     </div>
 </div>
 </template>
@@ -13,6 +13,7 @@ import Banner from '../components/ListSurah/Banner.vue';
 import Categories from '../components/ListSurah/Categories.vue';
 import ListSurah from '../components/ListSurah/ListSurah.vue';
 import Nav from '../components/ListSurah/Nav.vue';
+import {GetData} from './../Api/index';
 
 export default{
   components:{
@@ -21,10 +22,24 @@ export default{
  Categories,
  ListSurah
   },
-  data(){
+  data() {
     return {
-      data:[],
+      post: [],
+      isLoading: false,
+      no:1
     }
+  },
+  methods: {
+ async getPosts() {
+      this.isLoading = true
+        const response= await GetData(`chapters?language=id`);
+this.post=response.data.chapters;
+
+    }
+  },
+   mounted() {
+    this.getPosts()
+
   }
   
 }
