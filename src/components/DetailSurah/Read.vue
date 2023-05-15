@@ -1,8 +1,8 @@
 <template>
-    <div v-for="(items,index) in post.verses"  class="mt-2 border  border-[#E7E7E7] p-3 flex justify-end">
-       
+    <div v-for="(items,index) in post.verses" :id="'ayat'+items.id" class="mt-2 border  border-[#E7E7E7] p-3 flex justify-end">
     <div class="px-3 font-medium ">
-<Ayat :words="items.words"/>
+<Ayat :words="items.words" :ayat="items.verse_key"/>
+
     </div>
     </div>
 </template>
